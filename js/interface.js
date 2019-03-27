@@ -44,10 +44,6 @@ function startPrototype(){
   setTimeout(function () {
     startP5();
   }, 1000); 
-
-   setTimeout(function () {
-    startSequence(0);
-  }, 3000); 
 }
 
 

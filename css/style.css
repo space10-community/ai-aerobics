@@ -47,6 +47,21 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
 .levels {
   display: none;
   position: fixed;
+  width:900px;
+  top: calc(50% - 245px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  color: rgb(255, 82, 30);
+  z-index: 100;
+}
+
+.levels_large {
+  display: none;
+  position: fixed;
   width:1280px;
   top: calc(50% - 365px);
   left: 50%;
