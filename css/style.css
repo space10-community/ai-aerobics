@@ -74,6 +74,87 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
   z-index: 100;
 }
 
+.centerButtonStyle{
+    color: rgb(255, 82, 30);
+    text-decoration: none;
+
+}
+
+.centerButtonStyle:hover{
+  text-decoration: line-through;
+      cursor: pointer;
+
+}
+
+
+.centerButton {
+  display: none;
+  position: fixed;
+  width:900px;
+  top: calc(50% );
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  z-index: 100;
+}
+
+.centerButton_large {
+  display: none;
+  position: fixed;
+  width:1280px;
+  top: calc(50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 100px;
+  color: rgb(255, 82, 30);
+  z-index: 100;
+}
+
+.resetIcon {
+  display: none;
+  position: fixed;
+  top: calc(50% + 255px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+  color: rgb(255, 82, 30);
+  z-index: 100;
+}
+
+.resetIcon:hover{
+  color: rgb(0, 255, 0); 
+  cursor: pointer;
+}
+
+.resetIcon_large {
+  display: none;
+  position: fixed;
+  top: calc(50% + 380px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(255, 82, 30);
+  z-index: 100;
+}
+
+.resetIcon_large:hover{
+  color: rgb(0, 255, 0); 
+  cursor: pointer;
+}
+
+
 #preloader{
   position: fixed;
   width: 1px;

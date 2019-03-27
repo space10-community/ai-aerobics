@@ -20,7 +20,7 @@
       hej, welcome, ---- and all the infos -----
       <br />
       <br />
-      <button onclick="startPrototype();">start prototype</button>
+      <button onclick="startPrototype();">enter prototype</button>
   </div>  
 
  <!-- mobile screen will show up if you are on a mobile device and notify you to please use a computer and chrome or safarie -->
@@ -47,6 +47,16 @@
     <img id="frontImg" style="position: absolute; display: none"  height="100%" width="100%">
   </div> 
     
+  <!-- buttons -->
+  <div id="modeButtons" class="centerButton" >
+     <div id="buttonMode1" class="centerButtonStyle">warm-up</div>
+      <div id="buttonMode2" class="centerButtonStyle">work-out</div> 
+  </div>
+  <!--<div id="modeButtons" class="centerButton" >
+     <div onclick="startPrototype();">get GIF</div>
+  </div>-->
+  <div id="resetButton" class="resetIcon" >reset icon placeholder</div>
+
   <!-- pose prompts -->
   <div id="poseStart" class="levels">Match the poses!</div>
   <div id="pose1" class="levels">Pose 1</div>
@@ -80,9 +90,9 @@
   </p>
   </div>
   
-  <!--- our js imports -->
+  <!--- our js imports --> 
   <script src="js/prototype.js"></script>
-  <script src="js/interface.js"></script> 
+  <script src="js/interface.js"></script>  
 
   <!-- overlay img preloader -- img will be added by js -->
   <div id="preloader"></div>
