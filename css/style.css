@@ -1,0 +1,94 @@
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+	font-size: 100%;
+	text-rendering: optimizeLegibility;
+	/*text-rendering: geometricPrecision;*/
+	-webkit-font-feature-settings: "kern" 1;
+	font-family: Helvetica, Sans-Serif;
+}
+
+
+body {
+  	background-color: #e6e5e6;
+    color:  black;
+
+  }
+
+video {
+  width: 300;
+  height: 300;
+  z-index: 1;
+}
+
+p {
+  display: inline;
+  font-size: 16px;
+}
+
+.hiddenByDefault{
+  display: none;
+}
+
+
+#overlayImage{
+  position: fixed;
+  z-index: 70;
+ /*background-image: "assets/imgSet4/01.png";*/
+}
+
+
+/* hide grey frame before src is added to img */
+IMG[src=''], IMG:not([src])      {opacity:0;}
+
+
+.levels {
+  display: none;
+  position: fixed;
+  width:1280px;
+  top: calc(50% - 365px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 100px;
+  color: rgb(255, 82, 30);
+  z-index: 100;
+}
+
+#preloader{
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -10px;
+  bottom: -10px;
+}
+
+/***** beneth here dev and debug styles  ******/
+
+
+.debugText {
+  display: none;
+  position: absolute;
+  right: 1vw;
+  color: #ff0;
+  font-size: 1vw;
+  z-index: 100;
+
+}
+
+.debugButton {
+  margin: 6px 6px 6px 0;
+  padding: 4px;
+  font-size: 14px;
+  background-color: yellow;
+}
+
+.trainingsView{
+ /* display: none;*/
+  z-index: 100;
+}
+
