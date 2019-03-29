@@ -90,7 +90,6 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
 
 }
 
-
 .centerButton {
   position: fixed;
   width:900px;
@@ -114,9 +113,36 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
   font-weight: bold;
   text-align: center;
   font-size: 100px;
-  color: rgb(255, 82, 30);
   z-index: 100;
 }
+
+
+.gifButtonClass {
+  position: fixed;
+  width:900px;
+  top: calc(50% + 150px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  z-index: 100;
+}
+
+.gifButtonClass_large {
+  position: fixed;
+  width:1280px;
+  top: calc(50% + 230px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 100px;
+  z-index: 100;
+}
+
 
 .resetIcon {
   background-image: url("../assets/backIcon.png");
