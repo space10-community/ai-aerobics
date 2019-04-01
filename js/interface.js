@@ -3,9 +3,6 @@
 // turn on/off debug prints to the console
 var consoleDebug = true;
 
-// turn on/off debug prints to the DOM
-var drawDomDebug = true;
-
 //Operating System 
 // options are --> windows, android, iOS, opera, chrome, safari, firefox, edge, IE
 // boild down to --> mobile, chrome, safarie, otherBrowser
