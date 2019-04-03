@@ -207,6 +207,6 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
 
 .trainingsView{
  /* display: none;*/
-  z-index: 100;
+  z-index: 200;
 }
 
