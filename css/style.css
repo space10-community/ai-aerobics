@@ -192,7 +192,7 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
 .debugText {
   position: absolute;
   right: 1vw;
-  color: #ff0;
+  color: #faa;
   font-size: 1vw;
   z-index: 100;
 
