@@ -16,7 +16,7 @@ body {
     color: #fff;
     font-size: 16px;
     display: flex;
-    flex-flow: column no-wrap;
+    flex-direction: row;
     justify-content: space-between;
     cursor: url(hand.cur), pointer; /* custom cursor */
   }
@@ -30,10 +30,6 @@ video {
 p {
   display: inline;
   font-size: 16px;
-}
-
-.hiddenByDefault{
-  display: none;
 }
 
 a, a:hover, a:focus, a:visited, a:link {
@@ -95,21 +91,7 @@ body section div button {
   color: #777;
 }
 
-#overlayImage{
-  position: fixed;
-  z-index: 70;
- /*background-image: "assets/imgSet4/01.png";*/
-}
-
-/* hide grey frame before src is added to img */
-IMG[src=''], IMG:not([src])      {opacity:0;}
-
-.overImgClass{
-  position: absolute;
-  height: 100%; 
-  width: 100%;
-}
-
+/* =====levels CSS===== */
 
 .levels {
   position: fixed;
@@ -271,3 +253,23 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
   z-index: 200;
 }
 
+/* CIRG utility classes */
+
+#overlayImage{
+  position: fixed;
+  z-index: 70;
+ /*background-image: "assets/imgSet4/01.png";*/
+}
+
+.hiddenByDefault{
+  display: none;
+}
+
+/* hide grey frame before src is added to img */
+IMG[src=''], IMG:not([src])      {opacity:0;}
+
+.overImgClass{
+  position: absolute;
+  height: 100%; 
+  width: 100%;
+}
