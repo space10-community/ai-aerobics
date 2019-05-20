@@ -40,9 +40,16 @@ a, a:hover, a:focus, a:visited, a:link {
   color: #000;
 }
 
-/* S10 FRAME */
+/* S10 frame specifics */
 
+#launch {
+  margin-top: 24px;
+}
 
+/* target action buttons across states */
+body section div button {
+  
+}
 
 /* Flexbox classes */
 
@@ -56,6 +63,10 @@ a, a:hover, a:focus, a:visited, a:link {
 
 .column {
   flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .flex-auto {
@@ -81,8 +92,6 @@ a, a:hover, a:focus, a:visited, a:link {
 .grey {
   color: #777;
 }
-
-
 
 #overlayImage{
   position: fixed;
