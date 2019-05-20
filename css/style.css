@@ -12,12 +12,13 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 
 body {
-  	background-color: #f3f3f3;
-    color: #000;
+  	background-color: #101001;
+    color: #fff;
     font-size: 16px;
     display: flex;
     flex-flow: column no-wrap;
     justify-content: space-between;
+    cursor: url(hand.cur), pointer; /* custom cursor */
   }
 
 video {
@@ -41,6 +42,7 @@ a, a:hover, a:focus, a:visited, a:link {
 }
 
 /* S10 frame specifics */
+
 
 #launch {
   margin-top: 24px;
