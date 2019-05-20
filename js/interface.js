@@ -1,7 +1,7 @@
 
 
 // turn on/off debug prints to the console
-var consoleDebug = true;
+var consoleDebug = false;
 
 //Operating System 
 // options are --> windows, android, iOS, opera, chrome, safari, firefox, edge, IE
