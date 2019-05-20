@@ -42,40 +42,7 @@ a, a:hover, a:focus, a:visited, a:link {
 
 /* S10 FRAME */
 
-header, footer {
-  display: flex;
-  margin: 2rem;
-  color: #000;
-  font-size: 16px;
-  -webkit-flex-flow: row no-wrap;
-  -moz-flex-flow: row no-wrap;
-  -ms-flex-flow: row no-wrap;
-  -o-flex-flow: row no-wrap;
-  flex-flow: row no-wrap;
-}
 
-header {
-  justify-content: space-between;
-  -ms-align-items: center;
-  align-items: center;
-  height: 1rem;
-}
-
-footer {
-  position: absolute;
-  justify-content: flex-end;
-  -ms-align-items: flex-end;
-  align-items: flex-end;
-}
-
-footer div {
-  display: flex;
-  flex-flow: column;
-}
-
-footer div p {
-  margin-bottom: .25rem;
-}
 
 /* UTILITY CLASSES */
 
