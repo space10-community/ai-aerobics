@@ -19,10 +19,10 @@
 
   <!-- Landing page -->
   <section class="flex row hiddenByDefault" id="welcome">
-    <div class="flex column grow" id="title">
+    <div class="flex column flex-auto">
       <h1>Experimenting with Humans Learning from Machines Through Machine Learning</h1>
     </div>
-    <div class="flex column shrink" id="intro">
+    <div class="flex column flex-none">
       <p>
         Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
 
@@ -30,9 +30,9 @@
       <button id="launch" onclick="startPrototype();">
       Launch Experiment
       </button>
-      <div class="flex row" id="lp-footer">
+      <div class="flex row lp-footer">
         <div class="half">
-          <a id="s10" href="">SPACE10</a>
+          <a class="s10" href="">SPACE10</a>
           <p>+</p>
           <a href="#">CIRG</a>
         </div>
@@ -47,15 +47,16 @@
 
   <!-- Mobile error page, will show up if you are on a mobile device -->
   <section class="flex row hiddenByDefault" id="mobile">
-    <div class="flex column grow" id="title">
+    <div class="flex column flex-auto">
       <h1>You’ll need to run this experiment on a desktop or laptop computer in Chrome or Safari</h1>
     </div>
+    <div class="flex column flex-none">
       <button id="back" onclick="">
       Back to home
       </button>
-      <div class="flex row" id="lp-footer">
+      <div class="flex row lp-footer">
         <div class="half">
-          <a id="s10" href="">SPACE10</a>
+          <a class="s10" href="">SPACE10</a>
           <p>+</p>
           <a href="#">CIRG</a>
         </div>
@@ -70,15 +71,16 @@
 
   <!-- Browser error page, will show up if you are in another browser than Chrome or Safari -->
   <section class="flex column hiddenByDefault" id="otherBrowser">
-    <div class="flex column grow" id="title">
+    <div class="flex column flex-auto">
       <h1>You’ll need to use Chrome or Safari to run our experiment</h1>
     </div>
+    <div class="flex column flex-none">
       <button id="back" onclick="">
       Back to home
       </button>
-      <div class="flex row" id="lp-footer">
+      <div class="flex row lp-footer">
         <div class="half">
-          <a id="s10" href="">SPACE10</a>
+          <a class="s10" href="">SPACE10</a>
           <p>+</p>
           <a href="#">CIRG</a>
         </div>

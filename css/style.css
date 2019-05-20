@@ -44,11 +44,45 @@ a, a:hover, a:focus, a:visited, a:link {
 
 
 
+/* Flexbox classes */
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex-auto {
+  width: auto;
+  flex: 1 1 auto;
+}
+
+.flex-none {
+  min-width: 30vw;
+  flex: 0 0 auto;
+}
+
 /* UTILITY CLASSES */
+
+.half {
+  width: 50%;
+}
 
 .bold {
   font-weight: 700;
 }
+
+.grey {
+  color: #777;
+}
+
+
 
 #overlayImage{
   position: fixed;
