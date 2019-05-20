@@ -17,36 +17,79 @@
 
 <body>
 
-  <header>
-    <div id="orgs">
-      <h1><a href=""><span class="bold">SPACE10 </span></a>+ <a href="">CIRG</a></h1>
+  <!-- Landing page -->
+  <section class="flex row hiddenByDefault" id="welcome">
+    <div class="flex column grow" id="title">
+      <h1>Experimenting with Humans Learning from Machines Through Machine Learning</h1>
     </div>
-    <div id="links">
-      <a href="">What, how and why</a>
-      <a href="">Background</a>
+    <div class="flex column shrink" id="intro">
+      <p>
+        Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
+
+        Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      <button id="launch" onclick="startPrototype();">
+      Launch Experiment
+      </button>
+      <div class="flex row" id="lp-footer">
+        <div class="half">
+          <a id="s10" href="">SPACE10</a>
+          <p>+</p>
+          <a href="#">CIRG</a>
+        </div>
+        <div class="half grey">
+          <p><a href="https://github.com/space10-community/learning-from-machines"></a></p>
+          <p>v.1.0.0</p>
+          <p>© 2019, SPACE10</p>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <!-- welcome screen will show up if you in the right browser -->
-  <div id="welcome" class="hiddenByDefault" style="postion: fixed; background-color: #0f0;"> 
-      hej, welcome, ---- and all the infos -----
-      <br />
-      <br />
-      <button onclick="startPrototype();">enter prototype</button>
-  </div>  
+  <!-- Mobile error page, will show up if you are on a mobile device -->
+  <section class="flex row hiddenByDefault" id="mobile">
+    <div class="flex column grow" id="title">
+      <h1>You’ll need to run this experiment on a desktop or laptop computer in Chrome or Safari</h1>
+    </div>
+      <button id="back" onclick="">
+      Back to home
+      </button>
+      <div class="flex row" id="lp-footer">
+        <div class="half">
+          <a id="s10" href="">SPACE10</a>
+          <p>+</p>
+          <a href="#">CIRG</a>
+        </div>
+        <div class="half grey">
+          <p><a href="https://github.com/space10-community/learning-from-machines"></a></p>
+          <p>v.1.0.0</p>
+          <p>© 2019, SPACE10</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
- <!-- mobile screen will show up if you are on a mobile device and notify you to please use a computer and chrome or safarie -->
-  <div id="mobile" class="hiddenByDefault" style="postion: fixed; background-color: #f00;"> 
-      mhh, sorry no support for mobile devices, please use chrome or safarie on a desktio devices
-  </div>  
-
- <!-- other browser screen will show up if you are on a mobile device and notify you to please use a computer and chrome or safarie -->
-  <div id="otherBrowser" class="hiddenByDefault" style="postion: fixed; background-color: #f00;"> 
-      mhh, sorry no support for your browser, please use chrome or safarie
-  </div>  
-
-
+  <!-- Browser error page, will show up if you are in another browser than Chrome or Safari -->
+  <section class="flex column hiddenByDefault" id="otherBrowser">
+    <div class="flex column grow" id="title">
+      <h1>You’ll need to use Chrome or Safari to run our experiment</h1>
+    </div>
+      <button id="back" onclick="">
+      Back to home
+      </button>
+      <div class="flex row" id="lp-footer">
+        <div class="half">
+          <a id="s10" href="">SPACE10</a>
+          <p>+</p>
+          <a href="#">CIRG</a>
+        </div>
+        <div class="half grey">
+          <p><a href="https://github.com/space10-community/learning-from-machines"></a></p>
+          <p>v.1.0.0</p>
+          <p>© 2019, SPACE10</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!------------- from here on prototype thingies --------------------->
 
