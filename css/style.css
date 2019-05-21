@@ -3,7 +3,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
-	font-size: 100%;
+	font-size: 16px;
 	text-rendering: optimizeLegibility;
 	/*text-rendering: geometricPrecision;*/
 	-webkit-font-feature-settings: "kern" 1;
@@ -14,10 +14,11 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 body {
   	background-color: #101001;
     color: #fff;
-    font-size: 15px;
+    font-size: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 3rem;
     cursor: url(hand.cur), pointer; /* custom cursor */
   }
 
@@ -28,8 +29,7 @@ video {
 }
 
 p {
-  display: inline;
-  font-size: 16px;
+  display: block;
 }
 
 a, a:hover, a:focus, a:visited, a:link {
