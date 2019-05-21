@@ -14,7 +14,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 body {
   	background-color: #101001;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,6 +35,11 @@ p {
 a, a:hover, a:focus, a:visited, a:link {
   text-decoration: none;
   color: #000;
+}
+
+h1 {
+  font-size: 48px;
+  max-width: 420px;
 }
 
 section {
