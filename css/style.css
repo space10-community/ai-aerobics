@@ -1,3 +1,6 @@
+* {
+  cursor: url(../assets/exp-cursor.svg) 99 0, pointer !important; /* custom cursor */  
+}
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
@@ -17,7 +20,6 @@ body {
     font-size: 100%;
     display: block;
     margin: 3rem;
-    cursor: url(hand.cur), pointer; /* custom cursor */
   }
 
 video {
@@ -44,7 +46,9 @@ h1 {
 
 section {
   width: 100%;
+  max-width: 1440px;
   height: 100%;
+  max-height: 1080px;
 }
 
 /* S10 frame specifics */
@@ -159,7 +163,7 @@ section {
 .centerButtonStyle{
     color: rgb(255, 82, 30);
     text-decoration: none;
-
+    font-size: 6rem;
 }
 
 .centerButtonStyle:hover{
