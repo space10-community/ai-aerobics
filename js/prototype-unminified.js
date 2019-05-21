@@ -154,7 +154,7 @@ function startP5() {
     }), $("#resetButton").removeClass("resetIcon"), $("#resetButton").addClass("resetIcon_large"), $(".centerButton").each(function() {
         $(this).removeClass("centerButton"), $(this).addClass("centerButton_large")
     }), $("#gifButtonFrame").removeClass("gifButtonClass"), $("#gifButtonFrame").addClass("gifButtonClass_large")), consoleDebug && console.log("init display canvas"), initCanvas(), consoleDebug && console.log("init posNet"), initPoseNet(), drawDomDebug && $(".debugText").each(function() {
-        $(this).css("display", "block")
+        //$(this).css("display", "block")
     }), trainingView ? ($("#trainingDiv").load("js/prototype/trainAndDebug/trainingsDiv.html"), bindTrainingInput()) : (consoleDebug && console.log("load model and start prediction"), loadDataset("model"), startPrediction(), gif = new GIF(gifParameters), bindButtons(), setTimeout(function() {
         showMenu()
     }, 1e3)), loop()
