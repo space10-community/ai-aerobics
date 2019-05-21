@@ -7,7 +7,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 	text-rendering: optimizeLegibility;
 	/*text-rendering: geometricPrecision;*/
 	-webkit-font-feature-settings: "kern" 1;
-	font-family: Helvetica, Sans-Serif;
+	font-family: "Helvetica Neue LT W05_55 Roman", Helvetica, sans-serif;
 }
 
 
