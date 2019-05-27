@@ -35,7 +35,7 @@ p {
 
 a, a:hover, a:focus, a:visited, a:link {
   text-decoration: none;
-  color: #000;
+  color: #777;
 }
 
 h1 {
@@ -51,6 +51,10 @@ section {
   max-height: 960px;
 }
 
+canvas {
+  position: fixed;
+}
+
 /* S10 frame specifics */
 
 .innercontainer {
@@ -60,6 +64,10 @@ section {
 
 #launch {
   margin-top: 4rem;
+}
+
+#return {
+  margin-top: 7.2rem;
 }
 
 /* target action buttons across states */
@@ -113,12 +121,6 @@ section {
   width: 50%;
 }
 
-@media only screen and (max-width: 768px) {
-  .three-quarters {
-    width: 75%;
-  }
-}
-
 .bold {
   font-weight: 700;
 }
@@ -136,16 +138,16 @@ section {
   color: #777;
 }
 
-/* MOBILE */ 
+/* MOBILE FALLBACK */ 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   body {
     margin: 1rem;
   }
 
   h1 {
     font-size: 38px;
-    max-width: 100%;
+    max-width: 420px;
   }
 
   #mobile {

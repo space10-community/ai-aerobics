@@ -106,14 +106,15 @@
 
   <!-- Browser error page, will show up if you are in another browser than Chrome or Safari -->
   <section class="flex column hiddenByDefault" id="otherBrowser">
-    <div class="flex column space-between flex-auto">
-      <h1>You’ll need to use Chrome or Safari to run our experiment</h1>
-    </div>
-    <div class="flex column flex-none">
-      <button id="back" class="styled-button" onclick="">
-      Back to home
-      </button>
-      <div class="flex row">
+    <div class="innercontainer flex row">
+      <div class="flex column space-between flex-auto">
+        <h1>You’ll need to use Chrome or Safari to run our experiment</h1>
+      </div>
+      <div class="flex column flex-between flex-none two-col">
+        <button id="return" class="styled-button" onclick="window.location.href='https://space10.io'">
+        Back to home
+        </button>
+        <div class="flex row">
           <div class="half white">
             <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
             <p>+</p>
@@ -125,6 +126,7 @@
             <p>© 2019, SPACE10</p>
           </div>
         </div>
+      </div>
     </div>
   </section>
 
