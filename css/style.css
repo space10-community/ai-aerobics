@@ -155,7 +155,7 @@ section {
   }
 
   #mobile div:nth-of-type(2) {
-    width: 75;
+    width: 75%;
     align-self: flex-end;
   }
 
