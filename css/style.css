@@ -113,6 +113,12 @@ section {
   width: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+  .three-quarters {
+    width: 75%;
+  }
+}
+
 .bold {
   font-weight: 700;
 }
@@ -128,6 +134,34 @@ section {
 
 .grey p, .grey p a {
   color: #777;
+}
+
+/* MOBILE */ 
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 38px;
+    max-width: 100%;
+  }
+
+  #mobile {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #mobile div:nth-of-type(2) {
+    width: 75;
+    align-self: flex-end;
+  }
+
+  #mobile div:nth-of-type(2) button {
+    margin-bottom: 15vh;
+  }
 }
 
 /* =====levels CSS===== */
