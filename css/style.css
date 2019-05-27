@@ -46,7 +46,6 @@ h1 {
 
 section {
   width: 100%;
-  max-width: 1440px;
   height: 100%;
   max-height: 960px;
 }
@@ -160,6 +159,10 @@ canvas {
   flex: 0 0 auto;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
+
 /* UTILITY CLASSES */
 
 .two-col {
@@ -168,6 +171,18 @@ canvas {
 
 .half {
   width: 50%;
+}
+
+.one-third {
+  width: 33.333%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .bold {
@@ -185,6 +200,18 @@ canvas {
 
 .grey p, .grey p a {
   color: #777;
+}
+
+.bump-size p {
+  font-size: 115%;
+}
+
+.shrink-size p {
+  font-size: 85%;
+}
+
+.display-inline p {
+  display: inline;
 }
 
 /* MOBILE FALLBACK */ 
