@@ -39,6 +39,7 @@ function startPrototype(){
   
   $("#welcome").fadeOut(1500);
   setTimeout(function () {
+    $("#main").fadeIn(1500);
     startP5();
   }, 1000); 
 }
