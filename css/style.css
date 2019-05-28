@@ -1,20 +1,25 @@
+* {
+  cursor: url(../assets/exp-cursor.svg) 99 0, pointer !important; /* custom cursor */  
+}
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
-	font-size: 100%;
+	font-size: 16px;
 	text-rendering: optimizeLegibility;
 	/*text-rendering: geometricPrecision;*/
 	-webkit-font-feature-settings: "kern" 1;
-	font-family: Helvetica, Sans-Serif;
+	font-family: "Helvetica Neue LT W05_45 Light", Helvetica, sans-serif;
 }
 
 
 body {
-  	background-color: #e6e5e6;
-    color:  black;
-
+  	background-color: #101001;
+    color: #fff;
+    font-size: 100%;
+    display: block;
+    margin: 3rem;
   }
 
 video {
@@ -24,32 +29,220 @@ video {
 }
 
 p {
-  display: inline;
-  font-size: 16px;
+  display: block;
+  line-height: 1.5;
 }
 
-.hiddenByDefault{
-  display: none;
-
+a, a:hover, a:focus, a:visited, a:link {
+  text-decoration: none;
+  color: #777;
 }
 
-
-#overlayImage{
-  position: fixed;
-  z-index: 70;
- /*background-image: "assets/imgSet4/01.png";*/
+h1 {
+  font-size: 48px;
+  max-width: 420px;
+  font-weight: 300;
 }
 
-
-/* hide grey frame before src is added to img */
-IMG[src=''], IMG:not([src])      {opacity:0;}
-
-.overImgClass{
-  position: absolute;
-  height: 100%; 
+section {
   width: 100%;
+  height: 100%;
+  max-height: 960px;
 }
 
+canvas {
+  position: fixed;
+}
+
+/* S10 frame specifics */
+
+#welcome {
+  position: relative;
+  animation: fadein 1.5s;
+  -moz-animation: fadein 1.5s; /* Firefox */
+  -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+  -o-animation: fadein 1.5s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        top:3%;
+    }
+    to {
+        opacity:1;
+        top:0%;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity:0;
+        top:3%;
+    }
+    to {
+        opacity:1;
+        top:0%;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+        top:3%;
+    }
+    to {
+        opacity:1;
+        top:0%;
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity:0;
+        top:3%;
+    }
+    to {
+        opacity:1;
+        top:0%;
+    }
+}
+
+.innercontainer {
+  width: 100%;
+  height: 100%;
+}
+
+#launch {
+  margin-top: 4rem;
+}
+
+#return {
+  margin-top: 7.2rem;
+}
+
+/* target action buttons across states */
+.styled-button {
+  font-size: 1.5rem;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  background: none;
+}
+
+.text p {
+  margin-bottom: 1rem;
+}
+
+/* Flexbox classes */
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-none {
+  flex: 0 0 auto;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+/* UTILITY CLASSES */
+
+.two-col {
+  width: 420px;
+}
+
+.half {
+  width: 50%;
+}
+
+.one-third {
+  width: 33.333%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.white p, .grey p {
+  font-size: .8rem;
+  line-height: 2;
+}
+
+.white p, .white p a {
+  color: #fff;
+}
+
+.grey p, .grey p a {
+  color: #777;
+}
+
+.bump-size p {
+  font-size: 115%;
+}
+
+.shrink-size p {
+  font-size: 85%;
+}
+
+.display-inline p {
+  display: inline;
+}
+
+/* MOBILE FALLBACK */ 
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 38px;
+    max-width: 420px;
+  }
+
+  #mobile {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #mobile div:nth-of-type(2) {
+    width: 75%;
+    align-self: flex-end;
+  }
+
+  #mobile div:nth-of-type(2) button {
+    margin-bottom: 15vh;
+  }
+}
+
+/* =====levels CSS===== */
 
 .levels {
   position: fixed;
@@ -82,12 +275,12 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
 .centerButtonStyle{
     color: rgb(255, 82, 30);
     text-decoration: none;
-
+    font-size: 6rem;
 }
 
 .centerButtonStyle:hover{
   text-decoration: line-through;
-      cursor: pointer;
+  cursor: pointer;
 
 }
 
@@ -211,3 +404,23 @@ IMG[src=''], IMG:not([src])      {opacity:0;}
   z-index: 200;
 }
 
+/* CIRG utility classes */
+
+#overlayImage{
+  position: fixed;
+  z-index: 70;
+ /*background-image: "assets/imgSet4/01.png";*/
+}
+
+.hiddenByDefault{
+  display: none;
+}
+
+/* hide grey frame before src is added to img */
+IMG[src=''], IMG:not([src])      {opacity:0;}
+
+.overImgClass{
+  position: absolute;
+  height: 100%; 
+  width: 100%;
+}
