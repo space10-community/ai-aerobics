@@ -1,3 +1,5 @@
+![GIF compilation of the makers](https://space10.io/content/uploads/2019/06/learning-from-machines.gif)
+
 # Learning from Machines
 Introduction: What is it.
 
