@@ -255,13 +255,13 @@ canvas {
 .levels {
   position: fixed;
   width:900px;
-  top: calc(50% - 245px);
+  top: calc(50% - 196px);
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Helvetica';
   font-weight: bold;
   text-align: center;
-  font-size: 70px;
+  font-size: 56px;
   color: rgb(255, 82, 30);
   z-index: 100;
 }
@@ -269,13 +269,13 @@ canvas {
 .levels_large {
   position: fixed;
   width:1280px;
-  top: calc(50% - 365px);
+  top: calc(50% - 293px);
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Helvetica';
   font-weight: bold;
   text-align: center;
-  font-size: 100px;
+  font-size: 81px;
   color: rgb(255, 82, 30);
   z-index: 100;
 }
@@ -301,7 +301,7 @@ canvas {
   font-family: 'Helvetica';
   font-weight: bold;
   text-align: center;
-  font-size: 70px;
+  font-size: 56px;
   z-index: 100;
 }
 
@@ -314,7 +314,7 @@ canvas {
   font-family: 'Helvetica';
   font-weight: bold;
   text-align: center;
-  font-size: 100px;
+  font-size: 81px;
   z-index: 100;
 }
 
@@ -322,26 +322,26 @@ canvas {
 .gifButtonClass {
   position: fixed;
   width:900px;
-  top: calc(50% + 150px);
+  top: calc(50% + 115px);
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Helvetica';
   font-weight: bold;
   text-align: center;
-  font-size: 70px;
+  font-size: 56px;
   z-index: 100;
 }
 
 .gifButtonClass_large {
   position: fixed;
   width:1280px;
-  top: calc(50% + 230px);
+  top: calc(50% + 180px);
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Helvetica';
   font-weight: bold;
   text-align: center;
-  font-size: 100px;
+  font-size: 81px;
   z-index: 100;
 }
 
@@ -349,12 +349,12 @@ canvas {
 .resetIcon {
   background-image: url("../assets/backIcon.png");
   position: fixed;
-  top: calc(50% + 230px);
-  left: calc(50% - 353px);
+  top: calc(50% + 187px);
+  left: calc(50% - 281px);
   z-index: 100;
   background-size: 100% 100%;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 
 .resetIcon:hover{
@@ -365,12 +365,12 @@ canvas {
 .resetIcon_large {
   background-image: url("../assets/backIcon.png");
   position: fixed;
-  top: calc(50% + 355px);
-  left: calc(50% - 525px);
+  top: calc(50% + 282px);
+  left: calc(50% - 417px);
   z-index: 100;
   background-size: 100% 100%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 
