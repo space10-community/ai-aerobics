@@ -133,6 +133,10 @@ canvas {
   margin-bottom: 1rem;
 }
 
+.small-horisontal-margin p {
+  margin: 0 1rem;
+}
+
 /* Flexbox classes */
 
 .flex {
@@ -149,6 +153,10 @@ canvas {
 
 .flex-between {
   justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
 }
 
 .flex-auto {
