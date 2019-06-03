@@ -252,6 +252,7 @@ canvas {
 
 /* =====levels CSS===== */
 
+
 .levels {
   position: fixed;
   width:900px;
@@ -265,6 +266,22 @@ canvas {
   color: rgb(255, 82, 30);
   z-index: 100;
 }
+
+
+.levels_medium {
+  position: fixed;
+  width:900px;
+  top: calc(50% - 245px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  color: rgb(255, 82, 30);
+  z-index: 100;
+}
+
 
 .levels_large {
   position: fixed;
@@ -283,7 +300,8 @@ canvas {
 .centerButtonStyle{
     color: rgb(255, 82, 30);
     text-decoration: none;
-    font-size: 6rem;
+    /*font-size: 3rem;*/
+    font-size: 1.1em;
 }
 
 .centerButtonStyle:hover{
@@ -302,6 +320,20 @@ canvas {
   font-weight: bold;
   text-align: center;
   font-size: 56px;
+  z-index: 100;
+}
+
+
+.centerButton_medium {
+  position: fixed;
+  width:900px;
+  top: calc(50% );
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
   z-index: 100;
 }
 
@@ -332,6 +364,21 @@ canvas {
   z-index: 100;
 }
 
+
+.gifButtonClass_medium {
+  position: fixed;
+  width:900px;
+  top: calc(50% + 150px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Helvetica';
+  font-weight: bold;
+  text-align: center;
+  font-size: 70px;
+  z-index: 100;
+}
+
+
 .gifButtonClass_large {
   position: fixed;
   width:1280px;
@@ -361,6 +408,25 @@ canvas {
   background-image: url("../assets/backIconHover.png");
   cursor: pointer;
 }
+
+
+.resetIcon_medium {
+  background-image: url("../assets/backIcon.png");
+  position: fixed;
+  top: calc(50% + 230px);
+  left: calc(50% - 353px);
+  z-index: 100;
+  background-size: 100% 100%;
+  height: 35px;
+  width: 35px;
+}
+
+
+.resetIcon_medium:hover{
+  background-image: url("../assets/backIconHover.png");
+  cursor: pointer;
+}
+
 
 .resetIcon_large {
   background-image: url("../assets/backIcon.png");
