@@ -1,6 +1,5 @@
 * {
-    cursor: url(../assets/exp-cursor.svg) 32 0, pointer !important;
-    /* custom cursor */
+    cursor: url(../assets/crosshair-big.svg) 16 16, pointer !important;
 }
 
 body,
@@ -65,7 +64,7 @@ a:link {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 76px;
     max-width: 420px;
     font-weight: 300;
 }
@@ -148,6 +147,10 @@ canvas {
 
 #launch {
     margin-top: 4rem;
+}
+
+#launch:hover {
+  cursor: url(../assets/onHover.svg) 10 10, pointer !important;
 }
 
 #return {
