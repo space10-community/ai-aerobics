@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>cursorHover</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing_Desktop-Copy-2" transform="translate(-1094.000000, -637.000000)" fill="#FFFFFF">
+            <circle id="cursorHover" cx="1104" cy="647" r="10"></circle>
+        </g>
+    </g>
+</svg>
