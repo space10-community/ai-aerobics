@@ -1,500 +1,541 @@
 * {
-  cursor: url(../assets/exp-cursor.svg) 32 0, pointer !important; /* custom cursor */  
+    cursor: url(../assets/exp-cursor.svg) 32 0, pointer !important;
+    /* custom cursor */
 }
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
     padding: 0;
     margin: 0;
-	font-size: 16px;
-	text-rendering: optimizeLegibility;
-	/*text-rendering: geometricPrecision;*/
-	-webkit-font-feature-settings: "kern" 1;
-	font-family: "Helvetica Neue LT W05_45 Light", Helvetica, sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    /*text-rendering: geometricPrecision;*/
+    -webkit-font-feature-settings: "kern"1;
+    font-family: "Helvetica Neue LT W05_45 Light", Helvetica, sans-serif;
 }
 
 
 body {
-  	background-color: #101001;
+    background-color: #101001;
     color: #fff;
     font-size: 100%;
     display: block;
     margin: 3rem;
-  }
+}
 
 video {
-  width: 300;
-  height: 300;
-  z-index: 1;
+    width: 300;
+    height: 300;
+    z-index: 1;
 }
 
 p {
-  display: block;
-  line-height: 1.5;
+    display: block;
+    line-height: 1.5;
 }
 
-a, a:hover, a:focus, a:visited, a:link {
-  text-decoration: none;
-  color: #777;
+a,
+a:hover,
+a:focus,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: #777;
 }
 
 h1 {
-  font-size: 48px;
-  max-width: 420px;
-  font-weight: 300;
+    font-size: 48px;
+    max-width: 420px;
+    font-weight: 300;
 }
 
 section {
-  width: 100%;
-  height: 100%;
-  max-height: 960px;
+    width: 100%;
+    height: 100%;
+    max-height: 960px;
 }
 
 canvas {
-  position: fixed;
+    position: fixed;
 }
 
 /* S10 frame specifics */
 
 #welcome {
-  position: relative;
-  animation: fadein 1.5s;
-  -moz-animation: fadein 1.5s; /* Firefox */
-  -webkit-animation: fadein 1.5s; /* Safari and Chrome */
-  -o-animation: fadein 1.5s; /* Opera */
+    position: relative;
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    /* Firefox */
+    -webkit-animation: fadein 1.5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 1.5s;
+    /* Opera */
 }
 
 @keyframes fadein {
     from {
-        opacity:0;
-        top:3%;
+        opacity: 0;
+        top: 3%;
     }
+
     to {
-        opacity:1;
-        top:0%;
+        opacity: 1;
+        top: 0%;
     }
 }
+
 @-moz-keyframes fadein {
     from {
-        opacity:0;
-        top:3%;
+        opacity: 0;
+        top: 3%;
     }
+
     to {
-        opacity:1;
-        top:0%;
+        opacity: 1;
+        top: 0%;
     }
 }
+
 @-webkit-keyframes fadein {
     from {
-        opacity:0;
-        top:3%;
+        opacity: 0;
+        top: 3%;
     }
+
     to {
-        opacity:1;
-        top:0%;
+        opacity: 1;
+        top: 0%;
     }
 }
+
 @-o-keyframes fadein {
     from {
-        opacity:0;
-        top:3%;
+        opacity: 0;
+        top: 3%;
     }
+
     to {
-        opacity:1;
-        top:0%;
+        opacity: 1;
+        top: 0%;
     }
 }
 
 .innercontainer {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 #launch {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 #return {
-  margin-top: 7.2rem;
+    margin-top: 7.2rem;
 }
 
 /* target action buttons across states */
 .styled-button {
-  font-size: 1.5rem;
-  color: #fff;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: left;
-  background: none;
+    font-size: 1.5rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    background: none;
 }
 
 .text p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .small-horisontal-margin p {
-  margin: 0 1rem;
+    margin: 0 1rem;
 }
 
 /* Flexbox classes */
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .row {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .column {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .flex-between {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .flex-center {
-  justify-content: center;
+    justify-content: center;
 }
 
 .flex-auto {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .flex-none {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .flex-end {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 /* UTILITY CLASSES */
 
 .two-col {
-  width: 420px;
+    width: 420px;
 }
 
 .half {
-  width: 50%;
+    width: 50%;
 }
 
 .one-third {
-  width: 33.333%;
+    width: 33.333%;
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .bold {
-  font-weight: 700;
+    font-weight: 700;
 }
 
-.white p, .grey p {
-  font-size: .8rem;
-  line-height: 2;
+.white p,
+.grey p {
+    font-size: .8rem;
+    line-height: 2;
 }
 
-.white p, .white p a {
-  color: #fff;
+.white p,
+.white p a {
+    color: #fff;
 }
 
-.grey p, .grey p a {
-  color: #777;
+.grey p,
+.grey p a {
+    color: #777;
 }
 
 .bump-size p {
-  font-size: 115%;
+    font-size: 115%;
 }
 
 .shrink-size p {
-  font-size: 85%;
+    font-size: 85%;
 }
 
 .display-inline p {
-  display: inline;
+    display: inline;
 }
 
-/* MOBILE FALLBACK */ 
+/* MOBILE FALLBACK */
 
 @media only screen and (max-width: 1000px) {
-  body {
-    margin: 1rem;
-  }
+    body {
+        margin: 1rem;
+    }
 
-  h1 {
-    font-size: 38px;
-    max-width: 420px;
-  }
+    h1 {
+        font-size: 38px;
+        max-width: 420px;
+    }
 
-  #mobile {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+    #mobile {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-  #mobile div:nth-of-type(2) {
-    width: 75%;
-    align-self: flex-end;
-  }
+    #mobile div:nth-of-type(2) {
+        width: 75%;
+        align-self: flex-end;
+    }
 
-  #mobile div:nth-of-type(2) button {
-    margin-bottom: 15vh;
-  }
+    #mobile div:nth-of-type(2) button {
+        margin-bottom: 15vh;
+    }
 }
 
 /* =====levels CSS===== */
 
 
 .levels {
-  position: fixed;
-  width:900px;
-  top: calc(50% - 196px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 56px;
-  color: rgb(255, 82, 30);
-  z-index: 100;
+    position: fixed;
+    width: 900px;
+    top: calc(50% - 196px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 56px;
+    color: rgb(255, 82, 30);
+    z-index: 100;
 }
 
 
 .levels_medium {
-  position: fixed;
-  width:900px;
-  top: calc(50% - 245px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 70px;
-  color: rgb(255, 82, 30);
-  z-index: 100;
+    position: fixed;
+    width: 900px;
+    top: calc(50% - 245px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px;
+    color: rgb(255, 82, 30);
+    z-index: 100;
 }
 
 
 .levels_large {
-  position: fixed;
-  width:1280px;
-  top: calc(50% - 293px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 81px;
-  color: rgb(255, 82, 30);
-  z-index: 100;
+    position: fixed;
+    width: 1280px;
+    top: calc(50% - 293px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 81px;
+    color: rgb(255, 82, 30);
+    z-index: 100;
 }
 
-.centerButtonStyle{
+.centerButtonStyle {
     color: rgb(255, 82, 30);
     text-decoration: none;
     /*font-size: 3rem;*/
     font-size: 1.1em;
 }
 
-.centerButtonStyle:hover{
-  text-decoration: line-through;
-  cursor: pointer;
+.centerButtonStyle:hover {
+    text-decoration: line-through;
+    cursor: pointer;
 
 }
 
 .centerButton {
-  position: fixed;
-  width:900px;
-  top: calc(50% );
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 56px;
-  z-index: 100;
+    position: fixed;
+    width: 900px;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 56px;
+    z-index: 100;
 }
 
 
 .centerButton_medium {
-  position: fixed;
-  width:900px;
-  top: calc(50% );
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 70px;
-  z-index: 100;
+    position: fixed;
+    width: 900px;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
 }
 
 .centerButton_large {
-  position: fixed;
-  width:1280px;
-  top: calc(50%);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 81px;
-  z-index: 100;
+    position: fixed;
+    width: 1280px;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 81px;
+    z-index: 100;
 }
 
 
 .gifButtonClass {
-  position: fixed;
-  width:900px;
-  top: calc(50% + 115px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 56px;
-  z-index: 100;
+    position: fixed;
+    width: 900px;
+    top: calc(50% + 115px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 56px;
+    z-index: 100;
 }
 
 
 .gifButtonClass_medium {
-  position: fixed;
-  width:900px;
-  top: calc(50% + 150px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 70px;
-  z-index: 100;
+    position: fixed;
+    width: 900px;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 70px;
+    z-index: 100;
 }
 
 
 .gifButtonClass_large {
-  position: fixed;
-  width:1280px;
-  top: calc(50% + 180px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Helvetica';
-  font-weight: bold;
-  text-align: center;
-  font-size: 81px;
-  z-index: 100;
+    position: fixed;
+    width: 1280px;
+    top: calc(50% + 180px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-align: center;
+    font-size: 81px;
+    z-index: 100;
 }
 
 
 .resetIcon {
-  background-image: url("../assets/backIcon.png");
-  position: fixed;
-  top: calc(50% + 187px);
-  left: calc(50% - 281px);
-  z-index: 100;
-  background-size: 100% 100%;
-  height: 30px;
-  width: 30px;
+    background-image: url("../assets/backIcon.png");
+    position: fixed;
+    top: calc(50% + 187px);
+    left: calc(50% - 281px);
+    z-index: 100;
+    background-size: 100% 100%;
+    height: 30px;
+    width: 30px;
 }
 
-.resetIcon:hover{
-  background-image: url("../assets/backIconHover.png");
-  cursor: pointer;
+.resetIcon:hover {
+    background-image: url("../assets/backIconHover.png");
+    cursor: pointer;
 }
 
 
 .resetIcon_medium {
-  background-image: url("../assets/backIcon.png");
-  position: fixed;
-  top: calc(50% + 230px);
-  left: calc(50% - 353px);
-  z-index: 100;
-  background-size: 100% 100%;
-  height: 35px;
-  width: 35px;
+    background-image: url("../assets/backIcon.png");
+    position: fixed;
+    top: calc(50% + 230px);
+    left: calc(50% - 353px);
+    z-index: 100;
+    background-size: 100% 100%;
+    height: 35px;
+    width: 35px;
 }
 
 
-.resetIcon_medium:hover{
-  background-image: url("../assets/backIconHover.png");
-  cursor: pointer;
+.resetIcon_medium:hover {
+    background-image: url("../assets/backIconHover.png");
+    cursor: pointer;
 }
 
 
 .resetIcon_large {
-  background-image: url("../assets/backIcon.png");
-  position: fixed;
-  top: calc(50% + 282px);
-  left: calc(50% - 417px);
-  z-index: 100;
-  background-size: 100% 100%;
-  height: 40px;
-  width: 40px;
+    background-image: url("../assets/backIcon.png");
+    position: fixed;
+    top: calc(50% + 282px);
+    left: calc(50% - 417px);
+    z-index: 100;
+    background-size: 100% 100%;
+    height: 40px;
+    width: 40px;
 }
 
 
-.resetIcon_large:hover{
-  background-image: url("../assets/backIconHover.png");
-  cursor: pointer;
+.resetIcon_large:hover {
+    background-image: url("../assets/backIconHover.png");
+    cursor: pointer;
 }
 
 
-#preloader{
-  position: fixed;
-  width: 1px;
-  height: 1px;
-  left: -10px;
-  bottom: -10px;
+#preloader {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    left: -10px;
+    bottom: -10px;
 }
 
 /***** beneth here dev and debug styles  ******/
 
 
 .debugText {
-  position: absolute;
-  right: 1vw;
-  color: #faa;
-  font-size: 1vw;
-  z-index: 100;
-
+    position: absolute;
+    right: 1vw;
+    color: #faa;
+    font-size: 1vw;
+    z-index: 100;
 }
 
 .debugButton {
-  margin: 6px 6px 6px 0;
-  padding: 4px;
-  font-size: 14px;
-  background-color: yellow;
+    margin: 6px 6px 6px 0;
+    padding: 4px;
+    font-size: 14px;
+    background-color: yellow;
 }
 
-.trainingsView{
- /* display: none;*/
-  z-index: 200;
+.trainingsView {
+    /* display: none;*/
+    z-index: 200;
 }
 
 /* CIRG utility classes */
 
-#overlayImage{
-  position: fixed;
-  z-index: 70;
- /*background-image: "assets/imgSet4/01.png";*/
+#overlayImage {
+    position: fixed;
+    z-index: 70;
+    /*background-image: "assets/imgSet4/01.png";*/
 }
 
-.hiddenByDefault{
-  display: none;
+.hiddenByDefault {
+    display: none;
 }
 
 /* hide grey frame before src is added to img */
-IMG[src=''], IMG:not([src])      {opacity:0;}
+IMG[src=''],
+IMG:not([src]) {
+    opacity: 0;
+}
 
-.overImgClass{
-  position: absolute;
-  height: 100%; 
-  width: 100%;
+.overImgClass {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
