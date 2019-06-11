@@ -239,11 +239,13 @@ canvas {
     line-height: 2;
 }
 
+.white,
 .white p,
 .white p a {
     color: #fff;
 }
 
+.grey,
 .grey p,
 .grey p a {
     color: #777;
