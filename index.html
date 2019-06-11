@@ -1,216 +1,195 @@
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>"AI Aerobics" by SPACE10 + CIRG</title>
-  
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <link rel="stylesheet" type="text/css" href="css/button-normalise.css"/>
- 
-  <script src="js/libs/p5.min.js"></script> <!-- v 0.7.3 -->
-  <script src="js/libs/p5.dom.min.js"></script> <!-- v 0.7.3 -->
-  <script src="js/libs/ml5.min.js" type="text/javascript"></script> 
-  <script src="js/libs/jquery-3.3.1.min.js"></script>
-  <script src="js/libs/gif.js"></script>
-  <script src="js/libs/gif.worker.js"></script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- more lib imports at the end of the body -->
-
-  <!-- font import -->
-  <style type="text/css">
+    <meta charset="UTF-8">
+    <title>"AI Aerobics" by SPACE10 + CIRG</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/button-normalise.css" />
+    <script src="js/libs/p5.min.js"></script> <!-- v 0.7.3 -->
+    <script src="js/libs/p5.dom.min.js"></script> <!-- v 0.7.3 -->
+    <script src="js/libs/ml5.min.js" type="text/javascript"></script>
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="js/libs/gif.js"></script>
+    <script src="js/libs/gif.worker.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- more lib imports at the end of the body -->
+    <!-- font import -->
+    <style type="text/css">
     @import url("https://fast.fonts.net/t/1.css?apiType=css&projectid=9f841594-172f-4443-ac92-995e05ef5b61");
-      @font-face{
-          font-family:"Helvetica Neue LT W05_45 Light";
-          src:url("Fonts/cb0d1e8a-e111-4dbf-82c2-e948aba954c0.eot?#iefix");
-          src:url("Fonts/cb0d1e8a-e111-4dbf-82c2-e948aba954c0.eot?#iefix") format("eot"),url("Fonts/f9c5199e-a996-4c08-9042-1eb845bb7495.woff2") format("woff2"),url("Fonts/2a34f1f8-d701-4949-b12d-133c1c2636eb.woff") format("woff"),url("Fonts/fdf10d5e-4ce0-45e5-a6c1-5eaff6cb1c11.ttf") format("truetype");
-      }
-      @font-face{
-          font-family:"Helvetica Neue LT W05_55 Roman";
-          src:url("Fonts/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix");
-          src:url("Fonts/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix") format("eot"),url("Fonts/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"),url("Fonts/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"),url("Fonts/8f4a1705-214a-4dd0-80b8-72252c37e688.ttf") format("truetype");
-      }
-      @font-face{
-          font-family:"Helvetica Neue LT W05_65 Medium";
-          src:url("Fonts/5640036d-d549-4f16-b31e-87da78d9e832.eot?#iefix");
-          src:url("Fonts/5640036d-d549-4f16-b31e-87da78d9e832.eot?#iefix") format("eot"),url("Fonts/240c57a0-fdce-440d-9ce3-85e0cb56f470.woff2") format("woff2"),url("Fonts/7802e576-2ffa-4f22-a409-534355fbea79.woff") format("woff"),url("Fonts/14d824a2-2a5c-4692-8e30-74f6e177b675.ttf") format("truetype");
-      }
-      @font-face{
-          font-family:"Helvetica Neue LT W05_75 Bold";
-          src:url("Fonts/4c21ab66-1566-4a85-b310-fbc649985f88.eot?#iefix");
-          src:url("Fonts/4c21ab66-1566-4a85-b310-fbc649985f88.eot?#iefix") format("eot"),url("Fonts/800da3b0-675f-465f-892d-d76cecbdd5b1.woff2") format("woff2"),url("Fonts/7b415a05-784a-4a4c-8c94-67e9288312f5.woff") format("woff"),url("Fonts/f07c25ed-2d61-4e44-99ab-a0bc3ec67662.ttf") format("truetype");
+
+    @font-face {
+        font-family: "Helvetica Neue LT W05_45 Light";
+        src: url("Fonts/cb0d1e8a-e111-4dbf-82c2-e948aba954c0.eot?#iefix");
+        src: url("Fonts/cb0d1e8a-e111-4dbf-82c2-e948aba954c0.eot?#iefix") format("eot"), url("Fonts/f9c5199e-a996-4c08-9042-1eb845bb7495.woff2") format("woff2"), url("Fonts/2a34f1f8-d701-4949-b12d-133c1c2636eb.woff") format("woff"), url("Fonts/fdf10d5e-4ce0-45e5-a6c1-5eaff6cb1c11.ttf") format("truetype");
     }
-  </style>
 
+    @font-face {
+        font-family: "Helvetica Neue LT W05_55 Roman";
+        src: url("Fonts/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix");
+        src: url("Fonts/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix") format("eot"), url("Fonts/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"), url("Fonts/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"), url("Fonts/8f4a1705-214a-4dd0-80b8-72252c37e688.ttf") format("truetype");
+    }
 
+    @font-face {
+        font-family: "Helvetica Neue LT W05_65 Medium";
+        src: url("Fonts/5640036d-d549-4f16-b31e-87da78d9e832.eot?#iefix");
+        src: url("Fonts/5640036d-d549-4f16-b31e-87da78d9e832.eot?#iefix") format("eot"), url("Fonts/240c57a0-fdce-440d-9ce3-85e0cb56f470.woff2") format("woff2"), url("Fonts/7802e576-2ffa-4f22-a409-534355fbea79.woff") format("woff"), url("Fonts/14d824a2-2a5c-4692-8e30-74f6e177b675.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Helvetica Neue LT W05_75 Bold";
+        src: url("Fonts/4c21ab66-1566-4a85-b310-fbc649985f88.eot?#iefix");
+        src: url("Fonts/4c21ab66-1566-4a85-b310-fbc649985f88.eot?#iefix") format("eot"), url("Fonts/800da3b0-675f-465f-892d-d76cecbdd5b1.woff2") format("woff2"), url("Fonts/7b415a05-784a-4a4c-8c94-67e9288312f5.woff") format("woff"), url("Fonts/f07c25ed-2d61-4e44-99ab-a0bc3ec67662.ttf") format("truetype");
+    }
+    </style>
 </head>
 
 <body>
-
-  <!-- Main page --> 
-  <section class="hiddenByDefault" id="main">
-    <div class="innercontainer flex row flex-between">
-      <div class="flex column flex-end one-third white shrink-size">
-        <p><a href="mailto:digital@space10.io">Get in touch</a></p>
-        <p><a href="https://space10.io/project/ai-aerobics">About the experiment</a></p>
-        <p><a href="">Train your own models</a></p>
-      </div>
-      <div class="flex column one-third">
-        <div class="flex row flex-center white bump-size small-horisontal-margin">
-          <p class="text-center"><a href="https://space10.io" target="_blank" class="bold">SPACE10</a></p>
-          <p>+</p>
-          <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>  
+    <!-- Main page -->
+    <section class="hiddenByDefault" id="main">
+        <div class="innercontainer flex row flex-between">
+            <div class="flex column flex-end one-third white shrink-size">
+                <p><a href="mailto:digital@space10.io">Get in touch</a></p>
+                <p><a href="https://space10.io/project/ai-aerobics">About the experiment</a></p>
+                <p><a href="">Train your own models</a></p>
+            </div>
+            <div class="flex column one-third">
+                <div class="flex row flex-center white bump-size small-horisontal-margin">
+                    <p class="text-center"><a href="https://space10.io" target="_blank" class="bold">SPACE10</a></p>
+                    <p>+</p>
+                    <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
+                </div>
+            </div>
+            <div class="flex column flex-end one-third shrink-size">
+                <div class="grey text-right">
+                    <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
+                    <p>v.1.0.0</p>
+                    <p>© 2019, SPACE10</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="flex column flex-end one-third shrink-size">
-        <div class="grey text-right">
-          <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
-          <p>v.1.0.0</p>
-          <p>© 2019, SPACE10</p>
+    </section>
+    <!-- Landing page -->
+    <section class="hiddenByDefault" id="welcome">
+        <div class="innercontainer flex row">
+            <div class="flex column flex-auto two-col">
+                <h1>AI Aerobics: Moving with Machines</h1>
+            </div>
+            <div class="flex column flex-between flex-none two-col">
+                <div class="text">
+                    <p>
+                        Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+                    </p>
+                    <p>
+                        Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
+                    </p>
+                </div>
+                <button id="launch" class="styled-button" onclick="startPrototype();">
+                    Launch Experiment
+                </button>
+                <div class="flex row">
+                    <div class="half white">
+                        <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
+                        <p>+</p>
+                        <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
+                    </div>
+                    <div class="half grey">
+                        <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
+                        <p>v.1.0.0</p>
+                        <p>© 2019, SPACE10</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+    <!-- Mobile error page, will show up if you are on a mobile device -->
+    <section class="flex row hiddenByDefault" style="display: none !important" id="mobile">
+        <div class="flex column flex-auto">
+            <h1>You’ll need to run this experiment on a desktop or laptop computer.</h1>
+        </div>
+        <div class="flex column space-between flex-none three-quarters">
+            <button id="back" class="styled-button" onclick="window.location.href='https://space10.io'">
+                Back to home
+            </button>
+            <div class="flex row">
+                <div class="half white">
+                    <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
+                    <p>+</p>
+                    <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
+                </div>
+                <div class="half grey">
+                    <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
+                    <p>v.1.0.0</p>
+                    <p>© 2019, SPACE10</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Browser error page, will show up if you are in another browser than Chrome or Safari -->
+    <section class="flex column hiddenByDefault" style="display: none !important" id="otherBrowser">
+        <div class="innercontainer flex row">
+            <div class="flex column space-between flex-auto">
+                <h1>You’ll need to use Chrome or Safari to run our experiment</h1>
+            </div>
+            <div class="flex column flex-between flex-none two-col">
+                <button id="return" class="styled-button" onclick="window.location.href='https://space10.io'">
+                    Back to home
+                </button>
+                <div class="flex row">
+                    <div class="half white">
+                        <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
+                        <p>+</p>
+                        <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
+                    </div>
+                    <div class="half grey">
+                        <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
+                        <p>v.1.0.0</p>
+                        <p>© 2019, SPACE10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------- from here on prototype thingies --------------------->
+    <!-- video Container for the camera Input (source) will not be displayed -->
+    <div id="videoContainer"></div>
+    <!-- the actuall canvas will be generated by js -->
+    <div id="overlayImage">
+        <img id="backImg" class="hiddenByDefault overImgClass">
+        <img id="frontImg" class="hiddenByDefault overImgClass">
+        <img id="feedbackImg" class="hiddenByDefault overImgClass">
     </div>
-  </section>
-
-  <!-- Landing page -->
-  <section class="hiddenByDefault" id="welcome">
-    <div class="innercontainer flex row">
-      <div class="flex column flex-auto two-col">
-        <h1>AI Aerobics: Moving with Machines</h1>
-      </div>
-      <div class="flex column flex-between flex-none two-col">
-        <div class="text"> 
-          <p>
-            Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-          </p>
-          <p>
-            Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
-          </p>
-        </div>
-        <button id="launch" class="styled-button" onclick="startPrototype();">
-        Launch Experiment
-        </button>
-        <div class="flex row">
-          <div class="half white">
-            <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
-            <p>+</p>
-            <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
-          </div>
-          <div class="half grey">
-            <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
-            <p>v.1.0.0</p>
-            <p>© 2019, SPACE10</p>
-          </div>
-        </div>
-      </div>
+    <!-- buttons -->
+    <div id="modeButtons" class="centerButton hiddenByDefault">
+        <div id="buttonMode1" class="centerButtonStyle">warm up</div>
+        <div id="buttonMode2" class="centerButtonStyle">work out</div>
     </div>
-  </section>
-
-  <!-- Mobile error page, will show up if you are on a mobile device -->
-  <section class="flex row hiddenByDefault" style="display: none !important" id="mobile" >
-    <div class="flex column flex-auto">
-      <h1>You’ll need to run this experiment on a desktop or laptop computer.</h1>
+    <div id="gifButtonFrame" class="gifButtonClass hiddenByDefault">
+        <div id="gifButton" class="centerButtonStyle">Download gif</div>
     </div>
-    <div class="flex column space-between flex-none three-quarters">
-      <button id="back" class="styled-button" onclick="window.location.href='https://space10.io'">
-      Back to home
-      </button>
-      <div class="flex row">
-          <div class="half white">
-            <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
-            <p>+</p>
-            <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
-          </div>
-          <div class="half grey">
-            <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
-            <p>v.1.0.0</p>
-            <p>© 2019, SPACE10</p>
-          </div>
-        </div>
+    <div id="resetButton" class="hiddenByDefault resetIcon">
+        <!-- just preloading-->
+        <img class="hiddenByDefault" src="assets/backIconHover.png">
     </div>
-  </section>
-
-  <!-- Browser error page, will show up if you are in another browser than Chrome or Safari -->
-  <section class="flex column hiddenByDefault"  style="display: none !important" id="otherBrowser">
-    <div class="innercontainer flex row">
-      <div class="flex column space-between flex-auto">
-        <h1>You’ll need to use Chrome or Safari to run our experiment</h1>
-      </div>
-      <div class="flex column flex-between flex-none two-col">
-        <button id="return" class="styled-button" onclick="window.location.href='https://space10.io'">
-        Back to home
-        </button>
-        <div class="flex row">
-          <div class="half white">
-            <p><a class="bold" href="https://space10.io" target="_blank">SPACE10</a></p>
-            <p>+</p>
-            <p><a href="https://www.cirg.io/" target="_blank">CIRG</a></p>
-          </div>
-          <div class="half grey">
-            <p><a href="https://github.com/space10-community/ai-aerobics" target="_blank">Github</a></p>
-            <p>v.1.0.0</p>
-            <p>© 2019, SPACE10</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!------------- from here on prototype thingies --------------------->
-
-  <!-- video Container for the camera Input (source) will not be displayed -->
-  <div id="videoContainer"></div> 
-
-  <!-- the actuall canvas will be generated by js -->
-
-  <div id="overlayImage">
-    <img id="backImg" class="hiddenByDefault overImgClass">
-    <img id="frontImg" class="hiddenByDefault overImgClass">
-    <img id="feedbackImg" class="hiddenByDefault overImgClass">
-  </div> 
-    
-  <!-- buttons -->
-  <div id="modeButtons" class="centerButton hiddenByDefault" >
-     <div id="buttonMode1" class="centerButtonStyle">warm up</div>
-      <div id="buttonMode2" class="centerButtonStyle">work out</div> 
-  </div>
-  <div id="gifButtonFrame" class="gifButtonClass hiddenByDefault" >
-      <div id="gifButton" class="centerButtonStyle">Download gif</div>
-  </div>
-  <div id="resetButton" class="hiddenByDefault resetIcon">
-    <!-- just preloading-->
-    <img class="hiddenByDefault" src="assets/backIconHover.png">
-  </div>
-
-  <!-- warm up prompts -->
-  <div id="poseStart" class="levels hiddenByDefault">Match the poses!</div>
-  <div id="pose1" class="levels hiddenByDefault">Pose 1</div>
-  <div id="pose3" class="levels hiddenByDefault">Pose 2</div>
-  <div id="pose5" class="levels hiddenByDefault">Pose 3</div>
-  <div id="pose7" class="levels hiddenByDefault">Pose 4</div>
-  <div id="poseLoop" class="levels hiddenByDefault">Great! One more time</div>
-  <div id="poseEnd" class="levels hiddenByDefault">You got it!</div>
-  
-  <!-- work out prompts -->
-  <div id="moveStart" class="levels hiddenByDefault">Alright - keep up!</div>
-  <div id="moveState" class="levels hiddenByDefault"></div>
-  <div id="moveAverage" class="levels hiddenByDefault"></div>
-  <div id="moveEnd" class="levels hiddenByDefault">Yeah! You got the moves!</div>
-
-
-  <!-- trainings View-->
-  <div id="trainingDiv"></div>
-
-
-  
-
-  
-  <!--- our js imports --> 
-  <script src="js/prototype.js"></script>
-  <script src="js/interface.js"></script>  
-
-  <!-- overlay img preloader -- img will be added by js -->
-  <div id="preloader"></div>
-
+    <!-- warm up prompts -->
+    <div id="poseStart" class="levels hiddenByDefault">Match the poses!</div>
+    <div id="pose1" class="levels hiddenByDefault">Pose 1</div>
+    <div id="pose3" class="levels hiddenByDefault">Pose 2</div>
+    <div id="pose5" class="levels hiddenByDefault">Pose 3</div>
+    <div id="pose7" class="levels hiddenByDefault">Pose 4</div>
+    <div id="poseLoop" class="levels hiddenByDefault">Great! One more time</div>
+    <div id="poseEnd" class="levels hiddenByDefault">You got it!</div>
+    <!-- work out prompts -->
+    <div id="moveStart" class="levels hiddenByDefault">Alright - keep up!</div>
+    <div id="moveState" class="levels hiddenByDefault"></div>
+    <div id="moveAverage" class="levels hiddenByDefault"></div>
+    <div id="moveEnd" class="levels hiddenByDefault">Yeah! You got the moves!</div>
+    <!-- trainings View-->
+    <div id="trainingDiv"></div>
+    <!--- our js imports -->
+    <script src="js/prototype.js"></script>
+    <script src="js/interface.js"></script>
+    <!-- overlay img preloader -- img will be added by js -->
+    <div id="preloader"></div>
 </body>
 
 </html>
