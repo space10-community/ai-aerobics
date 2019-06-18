@@ -5,7 +5,7 @@ AI Aerobics is a digital experience where you follow a machine’s instructions 
 
 To learn more about how and why we made this experiment, head over to our [projects page](https://space10.io/project/ai-aerobics/).
 
-## Getting started
+## Train your own models
 Curious about the technology the drives the experiment? Want to train your own models? Head over to [CIRG's repository](https://github.com/cirg-io/AIAerobics-CodeExamples) to try out some more examples and get accustomed with how we made this experiment.
 
 ## Get in touch
